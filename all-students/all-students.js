@@ -4,9 +4,9 @@ document.querySelector('#btnCreate').addEventListener('click', () =>{
     const age = parseInt(document.querySelector('#age').value);
 
     // Convert the radio value to a boolean
-    const isActive = document.querySelector('input[name="active"]:checked').value === 'true';
+    const active = document.querySelector('input[name="active"]:checked').value === 'true';
 
-    const data = { name, age, isActive };
+    const data = { name, age, active };
     console.log(data);
 
     fetch('http://localhost:8080/students/add', {
